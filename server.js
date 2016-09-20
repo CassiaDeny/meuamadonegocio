@@ -1,22 +1,23 @@
+//Declaração de variáveis
 var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser');
 	cons = require('consolidate');
 	MongoClient = require('mongodb').MongoClient,
 
-
+//Configurações dos pacotes do Node.js para a aplicação
 app.engine('html', cons.nunjucks);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/js'));
 
+//Definição da porta de listen do servidor
 var port = Number(process.env.PORT || 3000);
 app.listen(port);
 
-//handle for internal server errors
+//Handle para erros internos do servidor
 function errorHandler(err, req, res, next){
 	res.status(500);
 	res.render('error_template', {error : err});
@@ -24,8 +25,13 @@ function errorHandler(err, req, res, next){
 
 app.use(errorHandler);
 
-const CONNECTIONSTRING = "mongodb://bdadmin:bdadmin@ds021346.mlab.com:21346/geproject";
+//Conexão com banco de dados de produção
+//const CONNECTIONSTRING = "mongodb://bdadmin:bdadmin@ds021346.mlab.com:21346/geproject";
 
+//Conexão com banco de dados local (Cássia)
+const CONNECTIONSTRING = "mongodb://localhost:27017/test";
+
+//Rotas
 app.get('/', function(req, res, next){
 	res.render('index');
 });
@@ -42,6 +48,11 @@ app.post('/sera-que-eu-devo-aceitar-cartao', function(req, res, next){
 	res.render('contents/sera-que-eu-devo-aceitar-cartao');
 });
 
+app.post('/como-usar-o-excel-ao-seu-favor', function(req, res, next){
+	res.render('contents/como-usar-o-excel-ao-seu-favor');
+});
+
+//Cadastro do visitante
 app.use('/cadastronews', function(req, res, next){
 
 	var name = req.body.name;
@@ -58,29 +69,37 @@ app.use('/cadastronews', function(req, res, next){
 	});
 });
 
+
+//Funções
 function validateEmail(err, db, email, leadInfos){
 	console.log(leadInfos);
 	console.log(email);
 
-	var query = {"email": email};
-	var cursor = db.collection('leads').find(query);
-	var inBase = false;
+	var validator = require('validator');
+	var isEmail = validator.isEmail(email);
+	console.log(isEmail);
 
-	cursor.forEach(
-		function(doc){
-			//trocar por uma popup
-			console.log("já cadastrado!")
-			inBase = true;			
-		},
-		
-		function(err){ 
-			db.close();
+	if (isEmail) {
+		var query = {"email": email};
+		var cursor = db.collection('leads').find(query);
+		var inBase = false;
 
-			if (! inBase) {
-				addLead(leadInfos);	
-			} 
-		}
-	);
+		cursor.forEach(
+			function(doc){
+				//trocar por uma popup
+				console.log("já cadastrado!")
+				inBase = true;			
+			},
+			
+			function(err){ 
+				db.close();
+
+				if (! inBase) {
+					addLead(leadInfos);	
+				} 
+			}
+		);
+	}
 }
 
 function addLead(leadInfos){

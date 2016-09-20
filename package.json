@@ -1,15 +1,15 @@
 {
-  "name": "meuamadonegocio",
+  "name": "devmeuamadonegocio",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "consolidate": "^0.14.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.10",
-    "consolidate": "^0.14.1",
-    "popups": "^1.1.3",
-    "nunjucks": "^2.5.2"
+    "nunjucks": "^2.5.2",
+    "popups": "^1.1.3"
   },
   "devDependencies": {},
   "scripts": {
