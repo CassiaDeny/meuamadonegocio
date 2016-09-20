@@ -1,0 +1,327 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* reset */
+
+* {
+margin:0;
+padding:0;
+list-style:none;
+vertical-align:baseline;
+}
+/* reset */
+
+body{
+	background-color:#eeeff0;
+	height:100%;
+}
+
+
+img{
+	max-width:100%;
+}
+
+.imglink{
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:raleway-regular;
+  font-size:1.0em;
+  background-color:#ffffff;
+ }
+ 
+ .topo{
+	 width:960px;
+	 margin:0 auto;
+	 background-color:#f5f6f8;
+ }
+ 
+ header{
+	 width:100%;
+	 background-color:#f5f6f8;
+	 float:left;
+ }
+ 
+.cabecalho{
+	 width:46%;
+	 padding-top:2%;
+	 padding-left:4%;
+	 padding-bottom:2%;
+	 float:left;
+ }
+ 
+ .lead{
+	 width:46%;
+	 float:left;
+	 padding-right:4%;
+	 padding-top:2%;
+	 float:left;
+	 
+ }
+ 
+ @font-face {
+     font-family: raleway-bold;
+	 src:url(../fontes/Raleway-Bold.ttf)
+}
+
+ @font-face {
+     font-family: raleway-medium;
+	 src:url(../fontes/Raleway-Medium.ttf)
+}
+
+ @font-face {
+     font-family: raleway-regular;
+	 src:url(../fontes/Raleway-Regular.ttf)
+}
+
+ @font-face {
+     font-family: raleway-thin;
+	 src:url(../fontes/Raleway-Thin.ttf)
+}
+
+h1{
+	font-family: raleway-regular;
+	float:left;	
+}
+
+h2{
+	font-family: raleway-regular;
+	font-size:2.0em;
+	margin-bottom:10px;
+}
+
+h3{
+	font-family: raleway-regular;
+	font-size:1.2em;
+	color:#bfbfbf;
+}
+
+.newsletter{
+	padding:10px;
+	font-family: raleway-regular;
+	background-color:#3fc35f;
+	font-size:1em;
+	color:#ffffff;
+	border-radius:3px;	
+	border:0px;
+	float:right;
+}
+
+.menu{
+	width:92%;
+	background-color:#129231;
+	min-height:20px;
+	padding:0 4%;
+	float:left;
+}
+
+.menu ul {
+	padding:5px;
+	margin:0px;
+	list-style:none;
+	height:auto;
+}
+
+.menu ul li { display: inline; }
+
+.menu ul li a {
+	display: inline-block;
+	color: #ffffff;
+	font-family:raleway-regular;
+	text-decoration: none;
+	font-size:1.0em;
+	float:left;
+	padding:5px 20px 5px 0px;
+}
+
+.menu ul li a:hover {
+	color:#06ff42;
+}
+.content{
+	width:100%;
+	float:left;
+	position: relative;
+	background-color:#ffffff;
+	overflow:hidden;
+	
+}
+
+.materia{
+	width:60%;
+	float:left;
+	background-color:#ffffff;
+	padding:5% 5%;	
+}
+
+.list-post{
+	width:60%;
+	float:left;
+	background-color:#ffffff;
+	padding:5% 5%;	
+}
+
+.list-post a{
+	font-family: raleway-regular;
+	font-size:1.0em;
+	margin-bottom:10px;
+	text-decoration:none;
+	color:#000000;
+}
+
+.list-post a:hover{
+	font-family: raleway-regular;
+	font-size:1.0em;
+	margin-bottom:10px;
+	text-decoration:none;
+	color:#494141;
+	text-decoration:none;
+}
+
+.list-post h3 {
+	font-family: raleway-regular;
+	font-size:1em;
+	color:#bfbfbf;
+}
+
+article{
+	margin-bottom:35px;
+}
+
+.sidebar{
+	width:26%;
+	float:left;
+	padding: 5% 2%;
+	background-color:#ffffff;
+}
+
+.sidebar ul li a {
+	display: inline-block;
+	color: #3fc35f;
+	font-family:raleway-regular;
+	text-decoration: none;
+	font-size:0.8em;
+	float:left;
+	padding:0px 0px 15px 0px;
+}
+
+.sidebar ul li a:hover {
+	text-decoration:underline;
+
+}
+.chamada{
+	color: #3fc35f;
+	font-family:raleway-regular;
+	font-size:1.0em;
+}
+
+figure{
+	margin:20px 0px;
+}
+
+.form{
+	width:960px;
+}
+
+.formulario{
+	padding: 1% 4%;
+	background-color: #129231;
+	float:left;
+	width:92%;
+	position:fixed;
+	bottom:0px;
+}
+
+input{
+	font-family: raleway-regular;
+	font-size:0.8em;
+	color:#bfbfbf;	
+	border-radius:3px;
+	border:0px;
+	width:200px;
+	height:30px;
+	margin-right: 10px;
+	padding-left:10px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+select{
+	font-family: raleway-regular;
+	font-size:0.8em;
+	color:#000000;	
+	border-radius:3px;
+	border:0px;
+	width:170px;
+	height:30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+button.submeter:hover{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#ffffff;
+	font-size:0.8 em;
+	color:#129231;
+	border-radius:3px;	
+	border:1px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.submeter:hover{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#ffffff;
+	font-size:0.8 em;
+	color:#129231;
+	border-radius:3px;	
+	border:1px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+button.submeter{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#129231;
+	font-size:0.8 em;
+	color:#ffffff;
+	border-radius:3px;	
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.submeter{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#129231;
+	font-size:0.8 em;
+	color:#ffffff;
+	border-radius:3px;	
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+	float:left;
+	margin-bottom:10px;
+	margin-top:10px;
+}
