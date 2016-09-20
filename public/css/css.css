@@ -13,7 +13,8 @@ vertical-align:baseline;
 /* reset */
 
 body{
-	background-color:#eeeff0;
+	background-image:url(imagens/padrao.png);
+	background-repeat:repeat;
 	height:100%;
 }
 
@@ -47,7 +48,7 @@ img{
  
  header{
 	 width:100%;
-	 background-color:#f5f6f8;
+	 background-color:#ffffff;
 	 float:left;
  }
  
@@ -96,25 +97,27 @@ img{
 
 h1{
 	font-family: raleway-regular;
-	float:left;	
+	float:left;
+	color:#317496;
 }
 
 h2{
 	font-family: raleway-regular;
 	font-size:2.0em;
 	margin-bottom:10px;
+	color:#317496;
 }
 
 h3{
 	font-family: raleway-regular;
 	font-size:1.2em;
-	color:#bfbfbf;
+	color:#858282;
 }
 
 .newsletter{
 	padding:10px;
 	font-family: raleway-regular;
-	background-color:#3fc35f;
+	background-color:#7db9d8;
 	font-size:1em;
 	color:#ffffff;
 	border-radius:3px;	
@@ -124,7 +127,7 @@ h3{
 
 .menu{
 	width:92%;
-	background-color:#129231;
+	background-color:#27ba4a;
 	min-height:20px;
 	padding:0 4%;
 	float:left;
@@ -156,7 +159,7 @@ h3{
 	width:100%;
 	float:left;
 	position: relative;
-	background-color:#ffffff;
+	background-color: #f5f6f8;
 	overflow:hidden;
 	
 }
@@ -164,14 +167,14 @@ h3{
 .materia{
 	width:60%;
 	float:left;
-	background-color:#ffffff;
+	background-color: #f5f6f8;
 	padding:5% 5%;	
 }
 
 .list-post{
 	width:60%;
 	float:left;
-	background-color:#ffffff;
+	background-color: #f5f6f8;
 	padding:5% 5%;	
 }
 
@@ -180,7 +183,7 @@ h3{
 	font-size:1.0em;
 	margin-bottom:10px;
 	text-decoration:none;
-	color:#000000;
+	color:#317496;
 }
 
 .list-post a:hover{
@@ -188,14 +191,16 @@ h3{
 	font-size:1.0em;
 	margin-bottom:10px;
 	text-decoration:none;
-	color:#000000;
+	color:#1b5c7e;
 	text-decoration:none;
 }
 
 .list-post h3 {
 	font-family: raleway-regular;
 	font-size:1em;
-	color:#000000;
+	color:#858282;
+	padding-bottom: 40px;
+
 }
 
 article{
@@ -206,12 +211,12 @@ article{
 	width:26%;
 	float:left;
 	padding: 5% 2%;
-	background-color:#ffffff;
+	background-color: #f5f6f8;
 }
 
 .sidebar ul li a {
 	display: inline-block;
-	color: #3fc35f;
+	color: #5a9dbf;
 	font-family:raleway-regular;
 	text-decoration: none;
 	font-size:0.8em;
@@ -224,7 +229,7 @@ article{
 
 }
 .chamada{
-	color: #3fc35f;
+	color: #5a9dbf;
 	font-family:raleway-regular;
 	font-size:1.0em;
 }
@@ -233,29 +238,42 @@ figure{
 	margin:20px 0px;
 }
 
-.form{
-	width:100%;
+.align-form{
+	width:960px;
+	padding-left: 100px;
 }
 
 .formulario{
-	padding: 4% 4%;
-	background-color: #129231;
-	float:center;
+	padding: 0 4%;
+	background-color: #27ba4a;
+	float:left;
 	width:92%;
 	bottom:0px;
 }
 
+
+.footer{
+	padding: 0 4%;
+	background-color: #27ba4a;
+	float:left;
+	width:92%;
+	height: 40px;
+	position:fixed;
+	bottom:0px;
+}
+
+
 input{
 	font-family: raleway-regular;
 	font-size:0.8em;
-	color:#000000;	
+	color: #000000;	
 	border-radius:3px;
 	border:0px;
 	width:90%;
 	height:30px;
-	margin-right: 10%;
-	padding-left:10%;
-	float:center;
+	margin-right: 10px;
+	padding-left:10px;
+	float:left;
 	margin-bottom:10px;
 	margin-top:10px;
 }
@@ -266,13 +284,29 @@ select{
 	color:#000000;	
 	border-radius:3px;
 	border:0px;
-	width:100%;
+	width:94%;
 	height:30px;
-	padding: 0px 10%;
-	margin-right: 10%;
+	padding: 0px 10px;
+	margin-right: 10px;
 	float:left;
 	margin-bottom:10px;
 	margin-top:10px;
+}
+
+button.submeter:hover{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#ffffff;
+	font-size:0.8 em;
+	color:#129231;
+	border-radius:3px;	
+	border:1px;
+	float:center;
+	margin-bottom:10px;
+	margin-top:10px;
+	width:50%;
+	margin-right: 25%;
+	margin-left: 25%;
 }
 
 .submeter:hover{
@@ -284,11 +318,30 @@ select{
 	border-radius:3px;	
 	border:1px;
 	float:center;
+	margin-bottom:10px;
+	margin-top:10px;
 	width:50%;
-	height:30px;
 	margin-right: 25%;
 	margin-left: 25%;
-	}
+}
+
+button.submeter{
+	padding:6px 15px;
+	font-family: raleway-regular;
+	background-color:#27ba4a;
+	font-size:0.8 em;
+	color:#ffffff;
+	border-radius:3px;	
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+	float:center;
+	margin-bottom:10px;
+	margin-top:10px;
+	width:50%;
+	margin-right: 25%;
+	margin-left: 25%;
+}
 
 .submeter{
 	padding:6px 15px;
@@ -301,9 +354,9 @@ select{
 	border-color:#ffffff;
 	border-width:1px;
 	float:center;
+	margin-bottom:10px;
+	margin-top:10px;
 	width:50%;
-	height:30px;
 	margin-right: 25%;
 	margin-left: 25%;
-
 }
