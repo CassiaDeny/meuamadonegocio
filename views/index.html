@@ -13,9 +13,6 @@
      <div class="cabecalho">
        <a href="#" class="link-home"><h1>Meu amado negócio</h1></a>
      </div>
-     <div class="lead">
-      <button type="button" class="newsletter">Receba nossas dicas</button>
-    </div>
   </header>
 
   <script>
@@ -73,35 +70,33 @@
         </article>
       </section>
       <aside class="sidebar">
-        <span class="chamada"><strong>Gostou dessa matéria, leia mais:</strong></span><br><br>
-        <ul>
-          <li><a href="#">> O impacto monstruoso das pequenas decisões de design</a></li>
-          <li><a href="#">> Um papo sobre responsabilidade</a></li>
-          <li><a href="#">> Toda ação tem uma reação</a></li>
-        </ul>
+      <br>
+      <br>
+        <span class="chamada"><strong>Gostou do nosso conteúdo? Então se inscreva na nossa newsletter!</strong></span><br><br>
+        <div class="form">
+          <form class="formulario" action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome">
+            <input type="text" name="email" placeholder="E-mail">
+            <input type="hidden" name="ip" id="ip" value="">
+            <select name="menu">
+              <option value="microempreendedor" selected>microempreendedor</option>
+              <option value="pequeno comércio">pequeno comércio</option>
+              <option value="loja online">loja online</option>
+            </select>
+
+            <center><input type="submit" value="Enviar" class="submeter" /></center>
+          </form>
+          <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+          <script type="text/javascript">
+            document.getElementById("ip").value = userip;
+          </script>
+        </div>
       </aside>
     </div>
   </main>
 
   <footer>
-   <div class="form">
-   <form class="formulario" action="/" method="POST">
-      <input type="text" name="name" placeholder="Nome" style="font-color:black" >
-      <input type="text" name="email" placeholder="E-mail" style="font-color:black" >
-      <input type="hidden" name="ip" id="ip" value="">
-      <select name="menu">
-        <option value="microempreendedor" selected>microempreendedor</option>
-        <option value="pequeno comércio">pequeno comércio</option>
-        <option value="loja online">loja online</option>
-      </select>
-
-      <input type="submit" value="Enviar" class="submeter" />
-    </form>
-    <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-    <script type="text/javascript">
-      document.getElementById("ip").value = userip;
-    </script>
-  </div>
-</footer>
+    <div class="form"></div>
+  </footer>
 </body>
 </html>
