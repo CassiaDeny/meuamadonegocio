@@ -25,9 +25,6 @@ function errorHandler(err, req, res, next){
 
 app.use(errorHandler);
 
-//Conexão com banco de dados de produção
-//const CONNECTIONSTRING = "mongodb://bdadmin:bdadmin@ds021346.mlab.com:21346/geproject";
-
 //Conexão com banco de dados local (Cássia)
 const CONNECTIONSTRING = "mongodb://localhost:27017/test";
 
