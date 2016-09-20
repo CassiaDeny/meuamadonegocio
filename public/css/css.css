@@ -67,6 +67,12 @@ img{
 	 float:left;
 	 
  }
+
+.link-home {
+    color: #000000;
+    font-family: raleway-regular;
+	float:left;	
+}
  
  @font-face {
      font-family: raleway-bold;
