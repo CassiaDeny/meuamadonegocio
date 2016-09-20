@@ -182,14 +182,14 @@ h3{
 	font-size:1.0em;
 	margin-bottom:10px;
 	text-decoration:none;
-	color:#494141;
+	color:#000000;
 	text-decoration:none;
 }
 
 .list-post h3 {
 	font-family: raleway-regular;
 	font-size:1em;
-	color:#bfbfbf;
+	color:#000000;
 }
 
 article{
@@ -243,7 +243,7 @@ figure{
 input{
 	font-family: raleway-regular;
 	font-size:0.8em;
-	color:#bfbfbf;	
+	color:#000000;	
 	border-radius:3px;
 	border:0px;
 	width:200px;
