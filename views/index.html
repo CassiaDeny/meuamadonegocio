@@ -78,7 +78,7 @@
         <div class="form">
           <form class="formulario" action="/" method="POST">
             <input type="text" name="name" placeholder="Nome">
-            <input type="text" name="email" placeholder="E-mail">
+            <input type="text" name="email" id="email" placeholder="E-mail">
             <input type="hidden" name="ip" id="ip" value="">
             <select name="menu">
               <option value="microempreendedor" selected>microempreendedor</option>
@@ -86,32 +86,38 @@
               <option value="loja online">loja online</option>
             </select>
 
-            <center><input type="submit" value="Enviar" class="submeter" /></center>
+            <center><input type="submit" value="Enviar" class="submeter" onclick='Javascript:checkEmail();' /></center>
           </form>
           <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
           <script type="text/javascript">
             document.getElementById("ip").value = userip;
           </script>
+          <script type="text/javascript">
+
+            function checkEmail() {
+
+              var email = document.getElementById('email');
+              var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+              if (!filter.test(email.value)) {
+                alert('Por favor insira um e-mail válido');
+                return false;
+              } else{
+                alert('Agradecemos o seu cadastro!');
+                return true;
+              }
+            }
+          </script>
         </div>
       </aside>
     </div>
   </main>
-
   <footer>
-             <div class="form ">
-              <div class="footer">
-              
-                <div class="align-form">
-                
-                
-                
-                
-                
-
-               
-             </div>
-              
-            </div>
-          </footer>
+   <div class="form">
+    <div class="footer">
+      <center><div class="align-form">
+      </div><center>
+    </div>
+  </footer>
 </body>
 </html>
