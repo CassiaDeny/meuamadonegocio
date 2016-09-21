@@ -117,6 +117,18 @@ app.get('/voce-tem-uma-estrategia-de-vendas', function(req, res, next){
 	res.render('contents/voce-tem-uma-estrategia-de-vendas');
 });	
 
+//============
+//Matéria 7
+//============
+app.post('/ganhe-uma-consultoria-gratuita', function(req, res, next){
+	
+	leads.convertion(req);
+	res.render('contents/ganhe-uma-consultoria-gratuita');
+});
+
+app.get('/ganhe-uma-consultoria-gratuita', function(req, res, next){
+	res.render('contents/ganhe-uma-consultoria-gratuita');
+});	
 
 
 
