@@ -7,6 +7,139 @@
 </head>
 <body>
 
+<!-- 
+## Indicar o caminho do css do popup ## 
+-->
+<script src="/js/popupS.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/popupS.min.css">
+
+<!-- 
+## Inicio do script do popu ##
+-->
+
+<script>
+     function popup() {
+      // Exemplo Temporario
+        // popupS.modal({
+        //     title:   'Himalaya',
+        //     content: {
+                // tag: 'img#himalaya.picture',
+                // src: 'http://static.hdw.eweb4.com/media/wallpapers_1920x1080/nature/1/1/himalaya-nature-hd-wallpaper-1920x1080-6944.jpg'
+        //     }
+        // });
+
+        // Script atual para o popoup
+        popupS.modal({
+              title:   'Title',
+               content: {
+                tag: 'div#id.class.class0',
+                css: {
+                    width: '600px',
+                    height: '400px',
+                    background: '#ffb366'
+                },
+                children: [
+                    {
+                        tag: 'div#id.class.class1',
+                        css: {
+                            float: 'left',
+                            width: '50%',
+                            height: '400px',
+                            background: '#66d9ff'
+                        },
+                        html: '<h1>E ai</h1><br><br>',
+                        children: [
+                            {
+                                tag: 'label',
+                                text: 'Testing.',
+                                htmlFor: 'input',
+                                css: {
+                                    width: '100px',
+                                    color: '#000000'
+                                }
+                                // title: 'Himalaya',
+                                // tag: 'img#himalaya.picture',
+                                // src: 'http://static.hdw.eweb4.com/media/wallpapers_1920x1080/nature/1/1/himalaya-nature-hd-wallpaper-1920x1080-6944.jpg'
+                            },
+                            {
+                              tag: 'input#input',
+                              placeholder: 'Senha',
+                              type: 'text',
+                              css: {
+                                  width: '50%',
+                                  color: '#000000'
+                              }
+                            }
+                        ],
+
+                        tag: 'div#id.class.class2',
+                        css: {
+                            float: 'right',
+                            width: '50%',
+                            height: '400px',
+                            background: '#b3b3b3',
+                            color: '#cc9900'
+                        },
+                        html: '<h1>Hello</h1><br><br>',
+                        children:[
+                            {
+                                tag: 'label',
+                                text: 'Text para informar sobre a participação do sortei.',
+                                htmlFor: 'input',
+                                css: {
+                                    width: '50%'
+                                }
+                            },
+                            {
+                              tag: 'input#input',
+                              placeholder: 'Nome',
+                              type: 'text',
+                              css: {
+                                  width: '50%',
+                                  color: '#000000'
+                              }
+                            },
+                            {
+                              tag: 'input#input',
+                              placeholder: 'E-mail',
+                              type: 'text',
+                              css: {
+                                  width: '50%',
+                                  color: '#000000'
+                              }
+                            },
+                            {
+                                tag: 'input#input',
+                                type: 'checkbox',
+                                css: {
+                                    width: '50%'
+                                }
+                            },
+                            {
+                              html: '<div id="baseDiv"></div><div id="popUpDiv"><select id="popupSelect"><option value="First">microempreendedor</option><option value="Second">pequeno comércio</option><option value="Third">loja online</option></select></div>​'
+                            }, 
+                            {
+                              tag: 'button',
+                              text: 'Enviar',
+                              css: {
+                                width: '20%',
+                                height: '25px'
+                              }
+                            }
+                        ]
+                    }
+                ]
+            }
+        });
+     }
+</script>
+
+<button onclick="popup()">Abrir popup</button>
+
+<!-- 
+## Fim do script do popup ##
+-->
+
 
   <header>
    <div class="topo">

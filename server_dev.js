@@ -71,6 +71,11 @@ app.get('/como-usar-o-excel-ao-seu-favor', function(req, res, next){
 });
 
 
+// Caminho estatico para a pasta publica [necessario para o Popup]
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 //Cadastro do visitante
 function getLeads(req, res, page){
 
