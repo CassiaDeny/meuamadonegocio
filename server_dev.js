@@ -70,6 +70,36 @@ app.get('/como-usar-o-excel-ao-seu-favor', function(req, res, next){
 	res.render('contents/como-usar-o-excel-ao-seu-favor');
 });
 
+//============
+//Matéria 4
+//============
+app.post('/5-aplicativos-para-o-empreendedor-autonomo', function(req, res, next){
+	getLeads(req, res, 'contents/5-aplicativos-para-o-empreendedor-autonomo');
+})
+
+app.get('/5-aplicativos-para-o-empreendedor-autonomo', function(req, res, next){
+	res.render('contents/5-aplicativos-para-o-empreendedor-autonomo');
+	
+//============
+//Matéria 5
+//============
+app.post('/passo-a-passo-de-como-abrir-um-cnpj', function(req, res, next){
+	getLeads(req, res, 'contents/passo-a-passo-de-como-abrir-um-cnpj');
+})
+
+app.get('/passo-a-passo-de-como-abrir-um-cnpj', function(req, res, next){
+	res.render('contents/passo-a-passo-de-como-abrir-um-cnpj');
+	
+//============
+//Matéria 6
+//============
+app.post('/voce-tem-uma-estrategia-de-vendas', function(req, res, next){
+	getLeads(req, res, 'contents/voce-tem-uma-estrategia-de-vendas');
+})
+
+app.get('/voce-tem-uma-estrategia-de-vendas', function(req, res, next){
+	res.render('contents/voce-tem-uma-estrategia-de-vendas');
+
 
 // Caminho estatico para a pasta publica [necessario para o Popup]
 var path = require('path');
