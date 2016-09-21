@@ -16,7 +16,6 @@
 <!-- 
 ## Inicio do script do popu ##
 -->
-
 <script>
      function popup() {
       // Exemplo Temporario
@@ -30,101 +29,60 @@
 
         // Script atual para o popoup
         popupS.modal({
-              title:   'Title',
                content: {
                 tag: 'div#id.class.class0',
                 css: {
-                    width: '600px',
+                    width: '100%',
                     height: '400px',
-                    background: '#ffb366'
                 },
                 children: [
                     {
-                        tag: 'div#id.class.class1',
+                        tag: 'img#himalaya.picture',
+                        src: '/imagens/people.jpg',
                         css: {
-                            float: 'left',
+                            width: '46%',
+                            height: '100%'
+                        }
+                      },
+                      {
+                        tag: 'input#input',
+                        placeholder: 'Senha',
+                        type: 'text',
+                        css: {
                             width: '50%',
-                            height: '400px',
-                            background: '#66d9ff'
+                            color: '#000000'
                         },
-                        html: '<h1>E ai</h1><br><br>',
-                        children: [
-                            {
-                                tag: 'label',
-                                text: 'Testing.',
-                                htmlFor: 'input',
-                                css: {
-                                    width: '100px',
-                                    color: '#000000'
-                                }
-                                // title: 'Himalaya',
-                                // tag: 'img#himalaya.picture',
-                                // src: 'http://static.hdw.eweb4.com/media/wallpapers_1920x1080/nature/1/1/himalaya-nature-hd-wallpaper-1920x1080-6944.jpg'
-                            },
-                            {
-                              tag: 'input#input',
-                              placeholder: 'Senha',
-                              type: 'text',
-                              css: {
-                                  width: '50%',
-                                  color: '#000000'
-                              }
-                            }
-                        ],
 
                         tag: 'div#id.class.class2',
                         css: {
                             float: 'right',
                             width: '50%',
-                            height: '400px',
-                            background: '#b3b3b3',
-                            color: '#cc9900'
+                            height: '100%',
+                            color: '#000000',
+                            padding: '10px'
                         },
-                        html: '<h1>Hello</h1><br><br>',
+                            html: '<p style="font-family: raleway-regular;font-size: 22px;margin-top:-15px">Trate seu negócio com respeito! Para acessar o conteúdo exclusivo do Meu Amado Negócio preencha os campos abaixo!</p><br>',
                         children:[
                             {
-                                tag: 'label',
-                                text: 'Text para informar sobre a participação do sortei.',
-                                htmlFor: 'input',
-                                css: {
-                                    width: '50%'
-                                }
+                              html: '<p style="font-family: raleway-regular;"><i>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</i></p>',
                             },
                             {
-                              tag: 'input#input',
-                              placeholder: 'Nome',
-                              type: 'text',
-                              css: {
-                                  width: '50%',
-                                  color: '#000000'
-                              }
+                              html: '<input type="text" name="name" placeholder="Nome" style="color:black;width:100%;">',
                             },
                             {
-                              tag: 'input#input',
-                              placeholder: 'E-mail',
-                              type: 'text',
-                              css: {
-                                  width: '50%',
-                                  color: '#000000'
-                              }
+                              html: '<br>',
                             },
                             {
-                                tag: 'input#input',
-                                type: 'checkbox',
-                                css: {
-                                    width: '50%'
-                                }
+                              html: '<input type="text" name="email" placeholder="E-mail" style="color:black;width:100%;">',
+                            },
+                            {
+                              html: '<input type="checkbox" name="sorteio" value="participar" checked><p style="font-family: raleway-regular;font-size: 12px;margin-top:100px;padding-bottom:5px;padding-left:5px;">Quero participar do sorteio de uma consultoria gratuita!</p>',
                             },
                             {
                               html: '<div id="baseDiv"></div><div id="popUpDiv"><select id="popupSelect"><option value="First">microempreendedor</option><option value="Second">pequeno comércio</option><option value="Third">loja online</option></select></div>​'
                             }, 
                             {
-                              tag: 'button',
-                              text: 'Enviar',
-                              css: {
-                                width: '20%',
-                                height: '25px'
-                              }
+                              html: '<center><input type="submit" value="Enviar" class="submeter" onclick="Javascript:checkEmail();"  style="font-family:raleway-Bold;font-size:16px;width:100%;height:50px;color:#ffffff;background:#27ba4a;"/></center>'
                             }
                         ]
                     }
