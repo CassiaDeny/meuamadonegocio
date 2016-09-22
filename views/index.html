@@ -13,17 +13,6 @@
 <script src="/js/popupS.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/popupS.min.css">
 
-<!-- 
-## Inicio do script do popup ##
--->
-
-
-<button onclick="popup()">Abrir popup</button>
-
-<!-- 
-## Fim do script do popup ##
--->
-
   <header>
    <div class="topo">
      <div class="cabecalho">
@@ -169,8 +158,7 @@
             }
           </script>
           <script>
-           function popup() {
-
+           
             var contentText = '<form class="formularioPopup" action="/" method="POST"><div class="dropper-form aligned"><div class="dropper-left"><img src="/imagens/people.jpg" alt="People" class="imgLeft" height="100%" width="100%"></div><dir class="dropper-right"><div class="dropper-title"><label>Trate seu negócio com respeito! Para acessar o conteúdo exclusivo do Meu Amado Negócio preencha os campos abaixo!</label></div><div class="dropper-subtitle"><label>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</label></div><div class="dropper-form-group1"><input type="name" name="name" id="namePopup" class="cName" placeholder="Insira seu nome"></div><div class="dropper-form-group2"><input type="email" name="email" id="emailPopup" class="cEmail" placeholder="Insira seu e-mail"><input type="hidden" name="ip" id="ip" value=' + userip + '></div><div class="dropper-form-group3"><select name="menu" id="menuOpt" class="optionSelect"><option value="microempreendedor" selected>microempreendedor</option><option value="pequeno comércio">pequeno comércio</option><option value="loja online">loja online</option></select></div><div class="dropper-form-controls"><button type="submit" class="dropper-button primary button-purple" onclick="Javascript:checkEmailPopUp();">Enviar</button></div></dir></div></form>';;
 
             popupS.modal({
@@ -180,7 +168,7 @@
               onClose: function() {
               }
             });
-          }
+          
         </script>
         <script type="text/javascript">
 
