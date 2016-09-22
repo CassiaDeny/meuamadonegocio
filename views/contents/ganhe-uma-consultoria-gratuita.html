@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8"/>
+ <title>Conteúdo voltado para microempreendedores</title>
+ <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+  <header>
+   <div class="topo">
+     <div class="cabecalho">
+       <a href="/" class="link-home"><h1>Meu amado negócio</h1></a>
+     </div>
+  </header>
+
+  <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-84445306-1', 'auto');
+        ga('send', 'pageview');
+  </script>
+  
+  <nav class="menu">&nbsp;
+      <!--
+      <ul>
+          <li><a href="#">Segmento A</a></li>
+          <li><a href="#">Segmento B</a></li>
+          <li><a href="#">Segmento C</a></li>
+      </ul>
+    -->
+  </nav>
+  <main class="container">
+    <div class="content">
+     <section class="materia">
+      <h2>Ganhe uma Consultoria Gratuita</h2>
+      <h3>Participe do Sorteio de uma Consultoria para seu Amado Negócio</h3>
+      <figure>
+        <img src="imagens/consultoria.jpg">
+      </figure>
+      <article>
+        Com o objetivo de auxiliar seu pequeno negócio ou iniciativa empreendedora iremos sortear uma consultoria sem nenhum custo para todos que se inscreverem em nossa newsletter.<br><br>
+
+		Nosso parceiro e consultor Caio Soares irá disponibilizar uma sessão gratuita de consultoria de 2 horas. Nela vocês terão insights super valiosos de nosso expert em vendas e estratégia.
+		Para isso basta se inscrever em nossa newsletter, e além de concorrer a essa oportunidade única, ainda tenha dicas valiosas semanalmente de nosso Blog!<br><br>
+		
+		<table>
+			<tr>
+				<td><img src="imagens/caiosoares.jpg"></td><td>Formado em marketing pela Universidade Anhembi Morumbi, com 8 anos de experiência na área de prospecção e vendas, atuando no mercado fitness, agência digital, tecnologia e inteligência de mercado. Perfil empreendedor, abriu seu primeiro negócio em 2012, empresa voltada para o mercado fitness e atualmente é co-fundador da empresa Mania Make, loja virtual de produtos de cosmético e maquiagem. Praticante de esportes, ama andar de skate e praticar corrida de rua, cinéfilo de carteirinha e grande fã de Game Of Thrones e Suits.</td><br><br>
+			</tr>
+		</table>
+		
+      </article>
+    </section>
+    <aside class="sidebar">
+      <br>
+      <br>
+        <span class="chamada"><strong>Gostou deste conteúdo? Então se inscreva na nossa newsletter!</strong></span><br><br>
+        <div class="form">
+          <form class="formulario" action="/ganhe-uma-consultoria-gratuita" method="POST">
+            <input type="text" name="name" placeholder="Nome" style="font-color:black" >
+            <input type="text" name="email" id="email" placeholder="E-mail" style="font-color:black" >
+            <input type="hidden" name="ip" id="ip" value="">
+            <select name="menu">
+              <option value="microempreendedor" selected>microempreendedor</option>
+              <option value="pequeno comércio">pequeno comércio</option>
+              <option value="loja online">loja online</option>
+            </select>
+
+            <center><input type="submit" value="Enviar" class="submeter" onclick='Javascript:checkEmail();' /></center>
+          </form>
+          <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+          <script type="text/javascript">
+            document.getElementById("ip").value = userip;
+          </script>
+          <script type="text/javascript">
+            function checkEmail() {
+              var email = document.getElementById('email');
+              var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              if (!filter.test(email.value)) {
+                alert('Por favor insira um e-mail válido');
+                return false;
+              } else{
+                alert('Agradecemos o seu cadastro!');
+                return true;
+              }
+            }
+          </script>
+        </div>
+      </aside>
+  </div>
+</main>
+<footer>
+   <div class="form ">
+    <div class="footer">
+      <div class="align-form">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
