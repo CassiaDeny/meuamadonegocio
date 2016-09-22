@@ -133,6 +133,7 @@
               <option value="microempreendedor" selected>microempreendedor</option>
               <option value="pequeno comércio">pequeno comércio</option>
               <option value="loja online">loja online</option>
+              <option value="autônomos sem CNPJ">autônomos sem CNPJ</option>
             </select>
 
             <center><input type="submit" value="Enviar" class="submeter" onclick='Javascript:checkEmail();' /></center>
@@ -158,14 +159,12 @@
             }
           </script>
           <script>
-           
-            var contentText = '<form class="formularioPopup" action="/" method="POST"><div class="dropper-form aligned"><div class="dropper-left"><img src="/imagens/people.jpg" alt="People" class="imgLeft" height="100%" width="100%"></div><dir class="dropper-right"><div class="dropper-title"><label>Trate seu negócio com respeito! Para acessar o conteúdo exclusivo do Meu Amado Negócio preencha os campos abaixo!</label></div><div class="dropper-subtitle"><label>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</label></div><div class="dropper-form-group1"><input type="name" name="name" id="namePopup" class="cName" placeholder="Insira seu nome"></div><div class="dropper-form-group2"><input type="email" name="email" id="emailPopup" class="cEmail" placeholder="Insira seu e-mail"><input type="hidden" name="ip" id="ip" value=' + userip + '></div><div class="dropper-form-group3"><select name="menu" id="menuOpt" class="optionSelect"><option value="microempreendedor" selected>microempreendedor</option><option value="pequeno comércio">pequeno comércio</option><option value="loja online">loja online</option></select></div><div class="dropper-form-controls"><button type="submit" class="dropper-button primary button-purple" onclick="Javascript:checkEmailPopUp();">Enviar</button></div></dir></div></form>';;
+
+            var contentText = '<form class="formularioPopup" action="/" method="POST"><div class="dropper-form aligned"><div class="dropper-left"><img src="/imagens/people.jpg" alt="People" class="imgLeft" height="100%" width="100%"></div><dir class="dropper-right"><div class="dropper-title"><label>Quer participar do sorteio de uma consultoria especializada para pequenos negócios? Se inscrceva aqui!</label></div><div class="dropper-subtitle"><label>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</label></div><div class="dropper-form-group1"><input type="name" name="name" id="namePopup" class="cName" placeholder="Insira seu nome"></div><div class="dropper-form-group2"><input type="email" name="email" id="emailPopup" class="cEmail" placeholder="Insira seu e-mail"><input type="hidden" name="ip" id="ip" value=' + userip + '></div><div class="dropper-form-group3"><select name="menu" id="menuOpt" class="optionSelect"><option value="microempreendedor" selected>microempreendedor</option><option value="pequeno comércio">pequeno comércio</option><option value="loja online">loja online</option><option value="autônomos sem CNPJ">autônomos sem CNPJ</option></select></div><div class="dropper-form-controls"><button type="submit" class="dropper-button primary button-purple" onclick="Javascript:checkEmailPopUp();">Enviar</button></div></dir></div></form>';
 
             popupS.modal({
               content: contentText,
               onSubmit: function() {
-              },
-              onClose: function() {
               }
             });
           
