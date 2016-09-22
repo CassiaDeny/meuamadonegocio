@@ -16,60 +16,7 @@
 <!-- 
 ## Inicio do script do popup ##
 -->
-<script>
-     function popup() {
-      // Exemplo Temporario
-        // popupS.modal({
-        //     title:   'Himalaya',
-        //     content: {
-                // tag: 'img#himalaya.picture',
-                // src: 'http://static.hdw.eweb4.com/media/wallpapers_1920x1080/nature/1/1/himalaya-nature-hd-wallpaper-1920x1080-6944.jpg'
-        //     }
-        // });
 
-        // Script atual para o popoup
-        popupS.modal({
-          content: '<form class="formularioPopup" action="/" method="POST"><div class="dropper-form aligned"><div class="dropper-left"><img src="/imagens/people.jpg" alt="People" class="imgLeft" height="100%" width="100%"></div><dir class="dropper-right"><div class="dropper-title"><label>Trate seu negócio com respeito! Para acessar o conteúdo exclusivo do Meu Amado Negócio preencha os campos abaixo!</label></div><div class="dropper-subtitle"><label>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</label></div><div class="dropper-form-group1"><input type="name" name="name" id="namePopup" class="cName" placeholder="Insira seu nome"></div><div class="dropper-form-group2"><input type="email" name="email" id="emailPopup" class="cEmail" placeholder="Insira seu e-mail"><input type="hidden" name="ip" id="ip" value=""></div><div class="dropper-form-group3"><select name="menu" id="menuOpt" class="optionSelect"><option value="microempreendedor" selected>microempreendedor</option><option value="pequeno comércio">pequeno comércio</option><option value="loja online">loja online</option></select></div><div class="dropper-form-controls"><button type="submit" class="dropper-button primary button-purple" onclick="Javascript:checkEmailPopUp();">Enviar</button></div></dir></div></form>',
-          onSubmit: function() {
-               // window.location.href = "/users/removeUser/#{user._id}"
-           },
-           onClose: function() {
-               // console.log(':(');
-           }
-        });
-     }
-</script>
-
-<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-<script type="text/javascript">
-// alert('teste ip' + userip);
-  document.getElementById("ip").value = userip;
-</script>
-<script type="text/javascript">
-
-  function checkEmailPopUp() {
-
-    var email = document.getElementById('emailPopup');
-    var name = document.getElementById('namePopup');
-    var optn = document.getElementById('menuOpt');
-    var itemSelected = optn.options[optn.selectedIndex].value;
-    var promocao = document.getElementById('chckboxId');
-    var ipNumber = document.getElementById("ip").value;
-
-    console.log(name.value + " - " + email.value + " - " + itemSelected + " - " + ipNumber + " - " + promocao.checked);
-
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-    if (!filter.test(email.value)) {
-      alert('Por favor insira um e-mail válido');
-      return false;
-    } else{
-      alert('Agradecemos o seu cadastro!');
-
-      return true;
-    }
-  }
-</script>
 
 <button onclick="popup()">Abrir popup</button>
 
@@ -221,6 +168,37 @@
               }
             }
           </script>
+          <script>
+           function popup() {
+
+            var contentText = '<form class="formularioPopup" action="/" method="POST"><div class="dropper-form aligned"><div class="dropper-left"><img src="/imagens/people.jpg" alt="People" class="imgLeft" height="100%" width="100%"></div><dir class="dropper-right"><div class="dropper-title"><label>Trate seu negócio com respeito! Para acessar o conteúdo exclusivo do Meu Amado Negócio preencha os campos abaixo!</label></div><div class="dropper-subtitle"><label>Nós odiamos Spam, igual a você! Então, pode ficar tranquilo :)</label></div><div class="dropper-form-group1"><input type="name" name="name" id="namePopup" class="cName" placeholder="Insira seu nome"></div><div class="dropper-form-group2"><input type="email" name="email" id="emailPopup" class="cEmail" placeholder="Insira seu e-mail"><input type="hidden" name="ip" id="ip" value=' + userip + '></div><div class="dropper-form-group3"><select name="menu" id="menuOpt" class="optionSelect"><option value="microempreendedor" selected>microempreendedor</option><option value="pequeno comércio">pequeno comércio</option><option value="loja online">loja online</option></select></div><div class="dropper-form-controls"><input type="checkbox" name="sortei" id="chckboxId" class="chckbx" checked><p class="txtCheckbox">Quero participar do sorteio de uma consultoria gratuita!</p><br><button type="submit" class="dropper-button primary button-purple" onclick="Javascript:checkEmailPopUp();">Enviar</button></div></dir></div></form>';;
+
+            popupS.modal({
+              content: contentText,
+              onSubmit: function() {
+              },
+              onClose: function() {
+              }
+            });
+          }
+        </script>
+        <script type="text/javascript">
+
+          function checkEmailPopUp() {
+
+            var email = document.getElementById('emailPopup');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (!filter.test(email.value)) {
+              alert('Por favor insira um e-mail válido');
+              return false;
+            } else{
+              alert('Agradecemos o seu cadastro!');
+
+              return true;
+            }
+          }
+        </script>
         </div>
       </aside>
     </div>
